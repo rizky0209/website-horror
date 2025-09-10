@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kisah Misteri</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: red;
+      text-shadow: 0 0 20px red;
+      animation: flicker 2s infinite;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      padding: 0 20px;
+      line-height: 1.6;
+      opacity: 0.8;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* Kabut / Fog efek */
+    .fog {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: url('https://i.ibb.co/QP1C9L7/fog.png') repeat;
+      background-size: cover;
+      opacity: 0.05;
+      animation: moveFog 60s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes moveFog {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="fog"></div>
+  <div class="container">
+    <h1>Kisah Misteri</h1>
+    <p>Pada malam yang sunyi, terdengar bisikan dari balik jendela tua itu. Tak ada yang berani mendekat, karena semua yang pernah mencoba... tidak pernah kembali.</p>
+  </div>
+</body>
+</html>
